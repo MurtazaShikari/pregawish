@@ -13,7 +13,7 @@
   </head>
   <body class="bg-gray-300 w-full h-full">
     <div
-      class="bg-white rounded-lg border-2 border-black w-[70%] m-6 flex flex-col py-6 px-12 pt-10"
+      class="bg-white rounded-lg w-[70%] m-6 flex flex-col py-6 px-12 pt-10 shadow-2xl"
     >
       <div class="grid grid-cols-3">
         <div class="image flex">
@@ -155,7 +155,10 @@
           </div>
         </div>
       </div>
-      <div class="desc flex flex-col justify-center">
+      <div
+        class="desc flex flex-col justify-center"
+        x-data="{ isShowing:false}"
+      >
         <div class="mt-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
           accusantium molestias optio esse! Vel, ut voluptatibus? Asperiores
@@ -169,10 +172,20 @@
           perferendis incidunt dolores! Fugiat doloribus, itaque dolorem
           recusandae, neque error illo aperiam atque, dolores nam culpa?
         </div>
+        <div x-show="isShowing" class="mt-6">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
+          provident recusandae esse tempore fuga numquam molestias tenetur
+          temporibus explicabo velit ipsum suscipit fugit earum. Officiis, et
+          voluptates ut perferendis ex praesentium tempora repudiandae fugit
+          explicabo maxime veritatis, nulla quos voluptatum quaerat recusandae
+          aperiam amet quod neque, distinctio esse. Dignissimos, quasi?
+        </div>
+
         <div class="flex justify-center mt-6 items-center">
           <button
             class="bg-[#00acb1] rounded-lg p-1 px-4 text-xl font-semibold font-sans hover:bg-[#76d6e1] text-white"
-            
+            x-on:click="isShowing = !isShowing"
+            x-text="isShowing ? 'View Less' : 'View More'"
           >
             View More
           </button>

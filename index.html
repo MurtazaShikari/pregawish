@@ -172,7 +172,7 @@
           perferendis incidunt dolores! Fugiat doloribus, itaque dolorem
           recusandae, neque error illo aperiam atque, dolores nam culpa?
         </div>
-        <div x-show="isShowing" class="mt-6">
+        <div x-show="isShowing" class="mt-6 transition ease-out duration-500">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
           provident recusandae esse tempore fuga numquam molestias tenetur
           temporibus explicabo velit ipsum suscipit fugit earum. Officiis, et
@@ -183,14 +183,14 @@
 
         <div class="flex justify-center mt-6 items-center">
           <button
-            class="bg-[#00acb1] rounded-lg p-1 px-4 text-xl font-semibold font-sans hover:bg-[#76d6e1] text-white"
+            class="bg-[#00acb1] uppercase rounded-lg p-1 px-4 text-lg font-semibold font-sans border-[#00acb1] border-2 hover:bg-[#76d6e1] text-white transition ease-out duration-500"
             x-on:click="isShowing = !isShowing"
             x-text="isShowing ? 'View Less' : 'View More'"
           >
             View More
           </button>
           <button
-            class="bg-[#00acb1] rounded-lg p-1 px-4 text-xl font-semibold font-sans hover:bg-[#76d6e1] ml-6 text-white"
+            class="bg-white uppercase rounded-lg p-1 px-4 text-lg font-semibold font-sans border-[#00acb1] border-2 hover:text-white hover:bg-[#00acb1] ml-6 text-[#00acb1] transition ease-out duration-500"
           >
             Book Now
           </button>

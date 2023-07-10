@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doctor Collection Page</title>
-    <link rel="stylesheet" href="./dist/output.css" />
-    <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="stylesheet" href="./css/fontawesome.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/fontawesome.min.css" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"
@@ -19,7 +18,7 @@
     >
       <div class="grid grid-cols-3">
         <div class="image flex">
-          <img src="images/doctor.png" alt="" class="w-60 h-60" />
+          <img src="../images/doctor.png" alt="" class="w-60 h-60" />
         </div>
         <div class="main">
           <div class="flex items-center">
@@ -170,8 +169,8 @@
             </li>
           </ul>
         </nav>
-        <div x-show="openTab === 1">
-          <div class="mt-8">
+        <div x-show="openTab === 1" class="w-[100%] mx-10">
+          <div class="mt-8 min-h-min">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
             accusantium molestias optio esse! Vel, ut voluptatibus? Asperiores
             fugit ex eligendi illo est. Nisi natus architecto pariatur quia
@@ -185,7 +184,7 @@
             itaque dolorem recusandae, neque error illo aperiam atque, dolores
             nam culpa?
           </div>
-          <div x-show="isShowing" class="mt-6 transition ease-out duration-500">
+          <div x-show="isShowing" class="mt-6 min-h-min">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
             provident recusandae esse tempore fuga numquam molestias tenetur
             temporibus explicabo velit ipsum suscipit fugit earum. Officiis, et

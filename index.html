@@ -33,41 +33,57 @@
         </div>
         <div class="main">
           <div class="flex items-center">
-            <h1 class="text-black text-2xl font-sans font-bold ml-1">
-              Dr Abhishek Sharma
+            <h1 class="text-black text-2xl font-sans font-bold">
+              Dr Rita Bakshi
             </h1>
           </div>
 
           <div class="flex items-center text-base font-sans">
-            <i class="far fa-graduation-cap mr-1"></i>
-            <h1 class="">MBBS, MSC, FCROG, BTech</h1>
+            <div class="max-w-xs">
+              <i class="far fa-graduation-cap w-full"></i>
+            </div>
+            <h1 class="ml-3">MBBS, MSC, FCROG, BTech</h1>
           </div>
           <div class="flex items-center font-sans text-base">
-            <i class="far fa-badge-check mr-2"></i>
-            <span class="">Medical Registration Verified</span>
+            <div class="max-w-[20px] min-w-[20px]">
+              <i class="far fa-badge-check w-full"></i>
+            </div>
+            <span class="ml-3">Medical Registration Verified</span>
           </div>
-          <div class="mt-[0.75rem] text-base">
-            <i class="far fa-pills ml-1"></i>
+          <div class="mt-[0.75rem] text-base flex">
+            <div class="max-w-[20px] min-w-[20px] inline">
+              <i class="far fa-pills"></i>
+            </div>
             <span
-              class="font-sans mr-2 w-2 h-2 border-[1px] border-black border-solid rounded-md px-2 bg-gray-300 ml-1"
-              >OBS</span
+              class="font-sans border-[1px] border-black border-solid rounded-md px-2 bg-gray-300 ml-3"
+              >Surrogacy</span
             >
             <span
-              class="font-sans w-2 h-2 border-[1px] border-black border-solid rounded-md px-2 bg-gray-300"
-              >GYN</span
+              class="font-sans border-[1px] border-black border-solid rounded-md px-2 bg-gray-300 ml-2"
+              >IVF</span
+            >
+            <span
+              class="font-sans border-[1px] border-black border-solid rounded-md px-2 bg-gray-300 ml-2"
+              >IUI</span
             >
           </div>
           <div class="mt-2 text-base font-sans flex items-center">
-            <i class="far fa-stars mr-1"></i>
-            <span class="">28 Years Experience</span>
+            <div class="max-w-[20px] min-w-[20px]">
+              <i class="far fa-stars"></i>
+            </div>
+            <span class="ml-3">28 Years Experience</span>
           </div>
           <div class="mt-2 text-base font-sans flex items-center">
-            <i class="fal fa-baby mr-2"></i>
-            <span class="">5 IVF Cycles Completed</span>
+            <div class="max-w-[20px] min-w-[20px]">
+              <i class="fal fa-baby"></i>
+            </div>
+            <span class="ml-3">5 IVF Cycles Completed</span>
           </div>
           <div class="flex items-center mt-2 text-base">
-            <i class="fas fa-phone-alt mr-1"></i>
-            <span>+91-9814325187</span>
+            <div class="max-w-[20px] min-w-[20px]">
+              <i class="far fa-phone-alt"></i>
+            </div>
+            <span class="ml-3">+91-9814325187</span>
           </div>
           <button
             class="mt-2 px-2 bg-[#00acb1] uppercase rounded-lg text-md font-[400] font-sans border-[#00acb1] border-2 hover:bg-[#76d6e1] text-white transition ease-out duration-500"
@@ -83,7 +99,10 @@
               <i class="far fa-map-marker-alt"></i>
               <span class="ml-1 text-lg font-sans">Janakpuri</span>
             </div>
-            <div class="text-lg font-sans font-semibold">Rs.1000</div>
+            <div class="font-sans font-semibold">
+              <i class="far fa-rupee-sign"></i>
+              <span class="text-lg">1000</span>
+            </div>
           </div>
           <div
             class="mt-1 flex flex-row items-center justify-center md:justify-between w-[90%]"
@@ -92,9 +111,12 @@
               <i class="far fa-map-marker-alt"></i>
               <span class="ml-1 text-lg font-sans">Noida</span>
             </div>
-            <div class="text-lg font-sans font-semibold">Rs.500</div>
+            <div class="font-sans font-semibold">
+              <i class="far fa-rupee-sign"></i>
+              <span class="text-lg">500</span>
+            </div>
           </div>
-          <div class="mt-[36px] text-lg font-semibold font-sans">
+          <div class="mt-4 text-lg font-semibold font-sans">
             First Consultancy Free
           </div>
         </div>
@@ -103,7 +125,6 @@
         class="desc flex flex-col justify-center mt-8"
         x-data="{
           openTab:1,
-          isShowing:false
         }"
       >
         <nav aria-label="Tabs">
@@ -117,7 +138,9 @@
 
                 <div class="flex items-center justify-center gap-4">
                   <i class="fas fa-user"></i>
-                  <span class="text-sm font-medium text-gray-900"> About </span>
+                  <span class="text-sm font-medium text-gray-900 uppercase">
+                    About
+                  </span>
                 </div>
               </a>
             </li>
@@ -130,7 +153,7 @@
                 ></span>
                 <div class="flex items-center justify-center gap-4">
                   <i class="fas fa-map-marker-alt"></i>
-                  <span class="text-sm font-medium text-gray-900">
+                  <span class="text-sm font-medium text-gray-900 uppercase">
                     Location
                   </span>
                 </div>
@@ -145,7 +168,7 @@
                 ></span>
                 <div class="flex items-center justify-center gap-4">
                   <i class="fas fa-clock"></i>
-                  <span class="text-sm font-medium text-gray-900">
+                  <span class="text-sm font-medium text-gray-900 uppercase">
                     Timings
                   </span>
                 </div>
@@ -159,50 +182,250 @@
                   class="absolute inset-x-0 -bottom-px h-px w-full bg-pink-600"
                 ></span>
                 <div class="flex items-center justify-center gap-4">
-                  <i class="fas fa-trophy"></i>
-                  <span class="text-sm font-medium text-gray-900">
-                    Awards
+                  <i class="fas fa-dollar-sign"></i>
+                  <span class="text-sm font-medium text-gray-900 uppercase">
+                    Cost
                   </span>
                 </div>
               </a>
             </li>
           </ul>
         </nav>
-        <div x-show="openTab === 1">
-          <div class="mt-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sed
-            soluta rerum. Sed expedita labore officiis ex maxime neque mollitia
-            fugiat harum iste cum nihil incidunt facere porro id iusto,
-            asperiores optio officia, distinctio libero nulla ducimus doloremque
-            saepe possimus. Omnis, inventore mollitia nostrum id consequuntur
-            doloremque adipisci aperiam aliquid iste? Iure ipsum rerum fugiat ea
-            officiis dignissimos debitis aliquid aliquam quam, explicabo natus
-            ad itaque enim quidem neque libero placeat minus! Vero illum earum
-            culpa id laboriosam cum distinctio ut fuga officiis, debitis ullam
-            praesentium sint repudiandae ipsa voluptate animi exercitationem eos
-            amet accusamus, eligendi mollitia consequuntur. Adipisci, minima!
+        <div class="min-h-[250px] max-h-[250px]">
+          <div x-show="openTab === 1">
+            <div class="mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              autem nemo perferendis qui corporis libero nobis, saepe numquam.
+              Voluptatem ab ipsa dolorem recusandae repudiandae culpa voluptates
+              magni. Nobis ex rerum qui obcaecati! Harum, distinctio. Deleniti
+              fugiat cum ipsam animi exercitationem! Maiores nulla non sunt ad
+              ipsam deleniti architecto dolores numquam necessitatibus beatae
+              commodi dolorum dignissimos, ab minus quod est nesciunt. Eos vitae
+              expedita cumque earum. Odit asperiores vitae, corrupti, quisquam
+              sequi officiis odio iste quibusdam maiores minus ullam ex aut
+              velit illum non exercitationem cumque dolores a, similique
+              incidunt est iure possimus ipsam! Quibusdam consequuntur
+              perspiciatis harum sed pariatur debitis!
+            </div>
+            <div class="flex justify-center mt-6 items-center">
+              <button
+                class="bg-[#00acb1] uppercase rounded-lg p-1 px-8 text-lg font-semibold font-sans border-[#00acb1] border-2 hover:bg-[#76d6e1] text-white transition ease-out duration-500"
+              >
+                View More
+              </button>
+            </div>
           </div>
-          <div x-show="isShowing" class="mt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-            maiores sunt id dolore. Ad sunt eligendi, facere reiciendis odit
-            sint, nemo ullam harum mollitia ipsam animi vel quaerat corporis
-            veniam et, laudantium expedita nihil! Quaerat minus adipisci soluta,
-            sapiente quae pariatur, explicabo placeat facilis illo incidunt
-            rerum, expedita doloremque enim?
-          </div>
-          <div class="flex justify-center mt-6 items-center">
-            <button
-              class="bg-[#00acb1] uppercase rounded-lg p-1 px-8 text-lg font-semibold font-sans border-[#00acb1] border-2 hover:bg-[#76d6e1] text-white transition ease-out duration-500"
-              x-on:click="isShowing = !isShowing"
-              x-text="isShowing ? 'View Less' : 'View More'"
-            >
-              View More
-            </button>
+          <div x-show="openTab === 2" class="mt-8">LOCATION TAB</div>
+          <div x-show="openTab === 3" class="mt-8">TIMINGS TAB</div>
+          <div x-show="openTab === 4" class="mt-8">COSTS TAB</div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-white rounded-lg w-[70vw] m-6 flex flex-col py-6 px-8 pt-10 shadow-2xl"
+    >
+      <div class="grid grid-cols-3">
+        <div class="image flex flex-col justify-center w-full">
+          <img src="./images/rita.png" alt="" class="w-56 h-56 text-center" />
+          <div class="flex mt-4 ml-8">
+            <div>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div>(100)</div>
           </div>
         </div>
-        <div x-show="openTab === 2">LOCATION TAB</div>
-        <div x-show="openTab === 3">TIMINGS TAB</div>
-        <div x-show="openTab === 4">AWARDS TAB</div>
+        <div class="main">
+          <div class="flex items-center">
+            <h1 class="text-black text-2xl font-sans font-bold">
+              Dr Rita Bakshi
+            </h1>
+          </div>
+
+          <div class="flex items-center text-base font-sans">
+            <div class="max-w-xs">
+              <i class="far fa-graduation-cap w-full"></i>
+            </div>
+            <h1 class="ml-3">MBBS, MSC, FCROG, BTech</h1>
+          </div>
+          <div class="flex items-center font-sans text-base">
+            <div class="max-w-[20px] min-w-[20px]">
+              <i class="far fa-badge-check w-full"></i>
+            </div>
+            <span class="ml-3">Medical Registration Verified</span>
+          </div>
+          <div class="mt-[0.75rem] text-base flex">
+            <div class="max-w-[20px] min-w-[20px] inline">
+              <i class="far fa-pills"></i>
+            </div>
+            <span
+              class="font-sans border-[1px] border-black border-solid rounded-md px-2 bg-gray-300 ml-3"
+              >Surrogacy</span
+            >
+            <span
+              class="font-sans border-[1px] border-black border-solid rounded-md px-2 bg-gray-300 ml-2"
+              >IVF</span
+            >
+            <span
+              class="font-sans border-[1px] border-black border-solid rounded-md px-2 bg-gray-300 ml-2"
+              >IUI</span
+            >
+          </div>
+          <div class="mt-2 text-base font-sans flex items-center">
+            <div class="max-w-[20px] min-w-[20px]">
+              <i class="far fa-stars"></i>
+            </div>
+            <span class="ml-3">28 Years Experience</span>
+          </div>
+          <div class="mt-2 text-base font-sans flex items-center">
+            <div class="max-w-[20px] min-w-[20px]">
+              <i class="fal fa-baby"></i>
+            </div>
+            <span class="ml-3">5 IVF Cycles Completed</span>
+          </div>
+          <div class="flex items-center mt-2 text-base">
+            <div class="max-w-[20px] min-w-[20px]">
+              <i class="far fa-phone-alt"></i>
+            </div>
+            <span class="ml-3">+91-9814325187</span>
+          </div>
+          <button
+            class="mt-2 px-2 bg-[#00acb1] uppercase rounded-lg text-md font-[400] font-sans border-[#00acb1] border-2 hover:bg-[#76d6e1] text-white transition ease-out duration-500"
+          >
+            Call Now
+          </button>
+        </div>
+        <div class="loc mt-[92px]">
+          <div
+            class="flex items-center justify-center md:justify-between w-[90%]"
+          >
+            <div class="flex items-center">
+              <i class="far fa-map-marker-alt"></i>
+              <span class="ml-1 text-lg font-sans">Janakpuri</span>
+            </div>
+            <div class="font-sans font-semibold">
+              <i class="far fa-rupee-sign"></i>
+              <span class="text-lg">1000</span>
+            </div>
+          </div>
+          <div
+            class="mt-1 flex flex-row items-center justify-center md:justify-between w-[90%]"
+          >
+            <div class="flex items-center">
+              <i class="far fa-map-marker-alt"></i>
+              <span class="ml-1 text-lg font-sans">Noida</span>
+            </div>
+            <div class="font-sans font-semibold">
+              <i class="far fa-rupee-sign"></i>
+              <span class="text-lg">500</span>
+            </div>
+          </div>
+          <div class="mt-4 text-lg font-semibold font-sans">
+            First Consultancy Free
+          </div>
+        </div>
+      </div>
+      <div
+        class="desc flex flex-col justify-center mt-8"
+        x-data="{
+          openTab:1,
+        }"
+      >
+        <nav aria-label="Tabs">
+          <ul class="flex border-b border-gray-100">
+            <li class="flex-1" @click="openTab = 1">
+              <a class="relative block p-4" href="#">
+                <span
+                  x-show="openTab === 1"
+                  class="absolute inset-x-0 -bottom-px h-px w-full bg-pink-600"
+                ></span>
+
+                <div class="flex items-center justify-center gap-4">
+                  <i class="fas fa-user"></i>
+                  <span class="text-sm font-medium text-gray-900 uppercase">
+                    About
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li class="flex-1" @click="openTab = 2">
+              <a class="relative block p-4" href="#">
+                <span
+                  x-show="openTab === 2"
+                  class="absolute inset-x-0 -bottom-px h-px w-full bg-pink-600"
+                ></span>
+                <div class="flex items-center justify-center gap-4">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="text-sm font-medium text-gray-900 uppercase">
+                    Location
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li class="flex-1" @click="openTab = 3">
+              <a class="relative block p-4" href="#">
+                <span
+                  x-show="openTab === 3"
+                  class="absolute inset-x-0 -bottom-px h-px w-full bg-pink-600"
+                ></span>
+                <div class="flex items-center justify-center gap-4">
+                  <i class="fas fa-clock"></i>
+                  <span class="text-sm font-medium text-gray-900 uppercase">
+                    Timings
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <li class="flex-1" @click="openTab = 4">
+              <a class="relative block p-4" href="#">
+                <span
+                  x-show="openTab === 4"
+                  class="absolute inset-x-0 -bottom-px h-px w-full bg-pink-600"
+                ></span>
+                <div class="flex items-center justify-center gap-4">
+                  <i class="fas fa-dollar-sign"></i>
+                  <span class="text-sm font-medium text-gray-900 uppercase">
+                    Cost
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="min-h-[250px] max-h-[250px]">
+          <div x-show="openTab === 1">
+            <div class="mt-8">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              autem nemo perferendis qui corporis libero nobis, saepe numquam.
+              Voluptatem ab ipsa dolorem recusandae repudiandae culpa voluptates
+              magni. Nobis ex rerum qui obcaecati! Harum, distinctio. Deleniti
+              fugiat cum ipsam animi exercitationem! Maiores nulla non sunt ad
+              ipsam deleniti architecto dolores numquam necessitatibus beatae
+              commodi dolorum dignissimos, ab minus quod est nesciunt. Eos vitae
+              expedita cumque earum. Odit asperiores vitae, corrupti, quisquam
+              sequi officiis odio iste quibusdam maiores minus ullam ex aut
+              velit illum non exercitationem cumque dolores a, similique
+              incidunt est iure possimus ipsam! Quibusdam consequuntur
+              perspiciatis harum sed pariatur debitis!
+            </div>
+            <div class="flex justify-center mt-6 items-center">
+              <button
+                class="bg-[#00acb1] uppercase rounded-lg p-1 px-8 text-lg font-semibold font-sans border-[#00acb1] border-2 hover:bg-[#76d6e1] text-white transition ease-out duration-500"
+              >
+                View More
+              </button>
+            </div>
+          </div>
+          <div x-show="openTab === 2" class="mt-8">LOCATION TAB</div>
+          <div x-show="openTab === 3" class="mt-8">TIMINGS TAB</div>
+          <div x-show="openTab === 4" class="mt-8">COSTS TAB</div>
+        </div>
       </div>
     </div>
     <!-- <div

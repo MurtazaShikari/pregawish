@@ -11,6 +11,21 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"
     ></script>
+
+    <style>
+      .stars-outer::before {
+        content: "\f005 \f005 \f005 \f005 \f005";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        color: #ccc;
+      }
+      .stars-inner::before {
+        content: "\f005 \f005 \f005 \f005 \f005";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        color: #f8ce0b;
+      }
+    </style>
   </head>
   <body class="bg-gray-300 w-full">
     <div
@@ -19,15 +34,13 @@
       <div class="grid grid-cols-3">
         <div class="image flex flex-col justify-center w-full">
           <img src="./images/doctor.png" alt="" class="w-56 h-56 text-center" />
-          <div class="flex mt-4 ml-8">
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
+          <div class="flex mt-4 ml-12 doc1">
+            <div class="stars-outer relative inline-block">
+              <div
+                class="stars-inner absolute top-0 left-0 whitespace-nowrap overflow-hidden w-0"
+              ></div>
             </div>
-            <div>(100)</div>
+            <span class="number-rating ml-2">(100)</span>
           </div>
         </div>
         <div class="main">
@@ -223,15 +236,13 @@
       <div class="grid grid-cols-3">
         <div class="image flex flex-col justify-center w-full">
           <img src="./images/rita.png" alt="" class="w-56 h-56 text-center" />
-          <div class="flex mt-4 ml-8">
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
+          <div class="flex mt-4 ml-8 doc2">
+            <div class="stars-outer relative inline-block">
+              <div
+                class="stars-inner absolute top-0 left-0 whitespace-nowrap overflow-hidden w-0"
+              ></div>
             </div>
-            <div>(100)</div>
+            <span class="number-rating ml-2">(100)</span>
           </div>
         </div>
         <div class="main">
@@ -589,5 +600,25 @@
         </button>
       </div>
     </div> -->
+    <script>
+      const ratings = { doc1: 3.6, doc2: 4.5 };
+      const starsTotal = 5;
+      document.addEventListener("DOMContentLoaded", getRatings);
+      function getRatings() {
+        for (let rating in ratings) {
+          const starPercentage = (ratings[rating] / starsTotal) * 100;
+
+          const starPercentageRounded = `${
+            Math.round(starPercentage / 10) * 10
+          }%`;
+
+          document.querySelector(`.${rating} .stars-inner`).style.width =
+            starPercentageRounded;
+          document.querySelector(
+            `.${rating} .number-rating`
+          ).innerHTML = `(${ratings[rating]})`;
+        }
+      }
+    </script>
   </body>
 </html>
